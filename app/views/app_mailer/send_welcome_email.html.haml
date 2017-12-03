@@ -1,0 +1,7 @@
+!!! 5
+%html(lang="en-US")
+  %body
+    %p Welcome to MyFlix, #{@user.full_name}!
+    %p 
+      You can sign in the site here:
+      -#= link_to 'Sign In', sign_in_url

@@ -1,0 +1,16 @@
+%article.video_category
+  %header
+    %h3= link_to "Myflix Videos"
+    %br
+    %br
+    - @categories.each do |category|
+      %header
+        %h3= category.name
+      .videos.row
+        - category.recent_videos.each do |video|
+          .video.col-sm-2
+            = link_to video do
+              %image(src="#{video.small_cover_url}")
+      %br
+      %br
+        

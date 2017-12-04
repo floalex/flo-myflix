@@ -22,9 +22,11 @@ describe ForgotPasswordsController do
       end
       
       it "sends out the email to the email address" do
-        Fabricate(:user, email: "joe@example.com")
-        post :create, email: "joe@example.com"
-        expect(ActionMailer::Base.deliveries.last.to).to eq(['joe@example.com'])
+        Sidekiq::Testing.inline! do
+          Fabricate(:user, email: "joe@example.com")
+          post :create, email: "joe@example.com"
+          expect(ActionMailer::Base.deliveries.last.to).to eq(['joe@example.com'])
+        end
       end
     end
     

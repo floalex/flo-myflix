@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby '2.1.2'
 
 gem 'bcrypt'
 gem 'bootstrap-sass', '3.1.1.1'
@@ -13,6 +12,7 @@ gem 'sass-rails'
 gem 'uglifier'
 gem 'jquery-rails'
 gem 'pg'
+gem 'sidekiq', '4.2.10'
 
 group :development do
   gem 'thin'
@@ -29,6 +29,7 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'capybara-email', '2.4.0'
   gem 'launchy'
   gem 'database_cleaner', '1.4.1'
   gem 'shoulda-matchers', '~> 3.0'

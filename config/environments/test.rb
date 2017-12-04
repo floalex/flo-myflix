@@ -14,5 +14,9 @@ Myflix::Application.configure do
   config.action_controller.allow_forgery_protection    = false
 
   config.action_mailer.delivery_method = :test
+  
+  host = 'rails-tutorial-floalex.c9.io'     # Cloud IDE
+  # host = 'localhost:3000'                     # Local server
+  config.action_mailer.default_url_options = { host: host, protocol: 'https' }
   config.active_support.deprecation = :stderr
 end

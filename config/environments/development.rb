@@ -7,10 +7,12 @@ Myflix::Application.configure do
 
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.delivery_method = :letter_opener # won't work with cloud9 setting
-  host = 'rails-tutorial-mhartl.c9users.io'     # Cloud IDE
+  config.action_mailer.delivery_method = :letter_opener # letter_opener won't work in cloud9 setting
+  host = 'rails-tutorial-floalex.c9.io'     # Cloud IDE 
   # host = 'localhost:3000'                     # Local server
   config.action_mailer.default_url_options = { host: host, protocol: 'https' }
+  
+  config.action_mailer.preview_path = "#{Rails.root}/spec/mailers/previews"
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log

@@ -48,6 +48,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    capybara-email (2.4.0)
+      capybara (~> 2.4)
+      mail
     coderay (1.1.1)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -57,6 +60,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
+    connection_pool (2.2.1)
     daemons (1.2.4)
     database_cleaner (1.4.1)
     debug_inspector (0.0.3)
@@ -111,6 +115,8 @@ GEM
       pry (>= 0.9.10, < 0.11.0)
     public_suffix (3.0.0)
     rack (1.5.5)
+    rack-protection (2.0.0)
+      rack
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.1.1)
@@ -137,6 +143,7 @@ GEM
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    redis (3.3.5)
     rspec-core (3.6.0)
       rspec-support (~> 3.6.0)
     rspec-expectations (3.6.0)
@@ -170,6 +177,11 @@ GEM
     sexp_processor (4.10.0)
     shoulda-matchers (3.1.2)
       activesupport (>= 4.0.0)
+    sidekiq (4.2.10)
+      concurrent-ruby (~> 1.0)
+      connection_pool (~> 2.2, >= 2.2.0)
+      rack-protection (>= 1.5.0)
+      redis (~> 3.2, >= 3.2.1)
     slop (3.6.0)
     sprockets (3.7.1)
       concurrent-ruby (~> 1.0)
@@ -207,6 +219,7 @@ DEPENDENCIES
   bootstrap-sass (= 3.1.1.1)
   bootstrap_form
   capybara
+  capybara-email (= 2.4.0)
   coffee-rails
   database_cleaner (= 1.4.1)
   fabrication
@@ -223,6 +236,7 @@ DEPENDENCIES
   rspec-rails (~> 3.5)
   sass-rails
   shoulda-matchers (~> 3.0)
+  sidekiq (= 4.2.10)
   thin
   uglifier
   vcr (= 2.9.3)

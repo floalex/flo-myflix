@@ -13,6 +13,11 @@ gem 'uglifier'
 gem 'jquery-rails'
 gem 'pg'
 gem 'sidekiq', '4.2.10'
+gem 'carrierwave'   # for uploading
+gem 'mini_magick'   # for image processing
+gem 'figaro'
+gem 'stripe'
+gem 'draper'
 
 group :development do
   gem 'thin'
@@ -31,11 +36,15 @@ group :test do
   gem 'capybara'
   gem 'capybara-email', '2.4.0'
   gem 'launchy'
-  gem 'database_cleaner', '1.4.1'
+  gem 'database_cleaner'
   gem 'shoulda-matchers', '~> 3.0'
-  gem 'vcr', '2.9.3'
+  gem 'vcr'
+  gem 'webmock'
+  gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
+  gem 'poltergeist'
 end
 
-group :production do
+group :staging, :production do
   gem 'rails_12factor'
 end

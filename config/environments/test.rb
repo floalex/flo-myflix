@@ -17,6 +17,6 @@ Myflix::Application.configure do
   
   host = 'rails-tutorial-floalex.c9.io'     # Cloud IDE
   # host = 'localhost:3000'                     # Local server
-  config.action_mailer.default_url_options = { host: host, protocol: 'https' }
+  config.action_mailer.default_url_options = { host: host, port: '52662' }
   config.active_support.deprecation = :stderr
 end

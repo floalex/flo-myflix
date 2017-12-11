@@ -13,6 +13,8 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+/public/uploads
+/spec/support/uploads
 
 # Ignore the database.yml file
 config/database.yml

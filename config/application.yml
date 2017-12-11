@@ -1,0 +1,13 @@
+# Add application configuration variables here.
+
+development:
+  STRIPE_PUBLISHABLE_KEY: pk_test_cpJAcb9Rx9PNrPw6ivG5P4cx
+  STRIPE_SECRET_KEY: sk_test_8mNod3rk2WQ0ekQyB54gtJhE
+
+test:
+  STRIPE_PUBLISHABLE_KEY: pk_test_cpJAcb9Rx9PNrPw6ivG5P4cx
+  STRIPE_SECRET_KEY: sk_test_8mNod3rk2WQ0ekQyB54gtJhE
+
+production:
+  STRIPE_PUBLISHABLE_KEY: pk_test_cpJAcb9Rx9PNrPw6ivG5P4cx
+  STRIPE_SECRET_KEY: sk_test_8mNod3rk2WQ0ekQyB54gtJhE

@@ -10,6 +10,7 @@
 # personally prefer to use find_or_create_by to only seed the post if it doesn't already exist(except for users)
 # note for User model: since the column name is `password_digest` not `password`, need to use block version of `find_or_create_by`
 
+# SELECT setval('videos_id_seq', (SELECT MAX(id) from "videos")); in psql
 puts "#{Video.count} videos"
 Video.find_or_create_by(
   id: 1,
@@ -48,16 +49,16 @@ Video.find_or_create_by(
   id: 4,
   title: "South Park", 
   description: "Funny Cartoon for adults", 
-  small_cover_url: "/tmp/south_park.jpg", 
-  large_cover_url: "/tmp/south_park.jpg",
+  small_cover: Rails.root.join('public/uploads/south_park.jpg').open, 
+  large_cover: Rails.root.join('public/uploads/south_park.jpg').open, 
   category_id: 1
 )
 Video.find_or_create_by(
   id: 5,
   title: 'Wonder Woman',
   description: 'Before she was Wonder Woman, she was Diana, princess of the Amazons, trained warrior. When a pilot crashes and tells of conflict in the outside world, she leaves home to fight a war, discovering her full powers and true destiny.',
-  small_cover_url: '/tmp/wonderwoman.jpg',
-  large_cover_url: '/tmp/wonderwoman.jpg',
+  small_cover: Rails.root.join('public/uploads/wonderwoman.jpg').open,
+  large_cover: Rails.root.join('public/uploads/wonderwoman.jpg').open,
   category_id: 2
 )
 Video.find_or_create_by(
@@ -70,8 +71,8 @@ Video.find_or_create_by(
   comes to the opposite sex. The youngest, Stewie, is a genius baby bent on killing his 
   mother and destroying the world. The talking dog, Brian, keeps Stewie in check while sipping 
   martinis and sorting through his own life issues.",
-  small_cover_url: "/tmp/family_guy.jpg", 
-  large_cover_url: "/tmp/family_guy.jpg",
+  small_cover: Rails.root.join('public/uploads/family_guy.jpg').open, 
+  large_cover: Rails.root.join('public/uploads/family_guy.jpg').open, 
   category_id: 1
 )
 Video.find_or_create_by(
@@ -81,8 +82,8 @@ Video.find_or_create_by(
   years in the future. He is taken in by his sole descendant, an elderly and addled scientist who owns 
   a small cargo delivery service. Among the other crew members are Capt. Leela, accountant Hermes, 
   intern Amy, obnoxious robot Bender and lobsterlike moocher Dr Zoidberg.",
-  small_cover_url: "/tmp/futurama.jpg",
-  large_cover_url: "/tmp/futurama.jpg",
+  small_cover: Rails.root.join('public/uploads/futurama.jpg').open,
+  large_cover: Rails.root.join('public/uploads/futurama.jpg').open,
   category_id: 1
 )
 Video.find_or_create_by(

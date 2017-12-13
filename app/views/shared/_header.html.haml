@@ -2,11 +2,12 @@
   %h1.col-md-2
     = link_to "MyFLiX", home_path
   - if signed_in?
-    %ul.col-md-4.clearfix
+    %ul.col-md-5.clearfix
       %li= link_to "Videos", home_path
       %li= link_to "My Queue", my_queue_path
       %li= link_to "People", people_path
-    = form_tag search_videos_path, method: :get, class: "col-md-5 navbar-form" do
+      %li= link_to "Advanced Search", advanced_search_videos_path, class: 'advanced-search'
+    = form_tag search_videos_path, method: :get, class: "col-md-4 navbar-form" do
       .form-group
         // %input.form-control(name="search_term" type="text" placeholder="Search for videos here")
         = text_field_tag :search_term, '', class: 'form-control', placeholder: 'Search for videos here'

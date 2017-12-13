@@ -29,7 +29,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sun, 10 Dec 2017 02:27:32 GMT
+      - Mon, 11 Dec 2017 20:34:07 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -49,7 +49,7 @@ http_interactions:
       Cache-Control:
       - no-cache, no-store
       Request-Id:
-      - req_vKvgLj40uHdBq0
+      - req_QvsNJnhbu4PVHC
       Stripe-Version:
       - '2015-04-07'
       Strict-Transport-Security:
@@ -58,10 +58,10 @@ http_interactions:
       encoding: UTF-8
       string: |
         {
-          "id": "tok_1BXKXQBTaoFOGB2wxQdZ2AIH",
+          "id": "tok_1BXxyVBTaoFOGB2wlN1M94p1",
           "object": "token",
           "card": {
-            "id": "card_1BXKXPBTaoFOGB2wpZm1WK0V",
+            "id": "card_1BXxyUBTaoFOGB2w9E3i6Bap",
             "object": "card",
             "address_city": null,
             "address_country": null,
@@ -85,19 +85,19 @@ http_interactions:
             "tokenization_method": null
           },
           "client_ip": "35.202.207.154",
-          "created": 1512872852,
+          "created": 1513024447,
           "livemode": false,
           "type": "card",
           "used": false
         }
     http_version: 
-  recorded_at: Sun, 10 Dec 2017 02:27:32 GMT
+  recorded_at: Mon, 11 Dec 2017 20:34:07 GMT
 - request:
     method: post
     uri: https://api.stripe.com/v1/charges
     body:
       encoding: US-ASCII
-      string: amount=999&currency=usd&card=tok_1BXKXQBTaoFOGB2wxQdZ2AIH&description=An+Invalid+Charge
+      string: amount=999&currency=usd&source=tok_1BXxyVBTaoFOGB2wlN1M94p1&description=An+Invalid+Charge
     headers:
       User-Agent:
       - Stripe/v1 RubyBindings/3.8.0
@@ -121,7 +121,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sun, 10 Dec 2017 02:27:32 GMT
+      - Mon, 11 Dec 2017 20:34:07 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -141,7 +141,7 @@ http_interactions:
       Cache-Control:
       - no-cache, no-store
       Request-Id:
-      - req_b4FlI1huapGGJn
+      - req_nW4I92kDYTmWQf
       Stripe-Version:
       - '2015-04-07'
     body:
@@ -153,9 +153,9 @@ http_interactions:
             "type": "card_error",
             "code": "card_declined",
             "decline_code": "generic_decline",
-            "charge": "ch_1BXKXQBTaoFOGB2wQZrOvmHJ"
+            "charge": "ch_1BXxyVBTaoFOGB2wXFETVoNI"
           }
         }
     http_version: 
-  recorded_at: Sun, 10 Dec 2017 02:27:32 GMT
+  recorded_at: Mon, 11 Dec 2017 20:34:07 GMT
 recorded_with: VCR 2.9.3

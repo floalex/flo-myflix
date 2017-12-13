@@ -17,7 +17,10 @@ gem 'carrierwave'   # for uploading
 gem 'mini_magick'   # for image processing
 gem 'figaro'
 gem 'stripe'
+gem 'stripe_event'
 gem 'draper'
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
 
 group :development do
   gem 'thin'

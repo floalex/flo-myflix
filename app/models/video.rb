@@ -1,4 +1,10 @@
 class Video < ActiveRecord::Base
+  ## Elasticsearch proxy: __elasticsearch__
+  include Elasticsearch::Model
+  include Elasticsearch::Model::Callbacks
+  
+  index_name "myflix_#{Rails.env}"
+  
   belongs_to :category
   has_many :reviews, -> { order(created_at: :desc) }
   
@@ -15,7 +21,49 @@ class Video < ActiveRecord::Base
   end
   
   def rating
-    avg = reviews.average(:rating)
-    avg.round(1) if avg
+    reviews.average(:rating).to_f.round(1) if reviews.any?
+  end
+  
+  def self.search(query, options={})
+    search_definition = {
+      query: {
+        multi_match: {
+          query: query,
+          # matches with video titles will have the most weight, then the matches against video 
+          # descriptions, and finally matches against videos' reviews. Specifically, the weights 
+          # for the three are going to be 100:50:1.
+          fields: ['title^100', 'description^50'],
+          operator: 'and'
+        }
+      }
+    }
+    
+    if query.present? && options[:reviews].present?
+      search_definition[:query][:multi_match][:fields] << "reviews.content"
+    end
+    
+    if options[:rating_from].present? || options[:rating_to].present?
+      search_definition[:filter] = {
+        range: {
+          rating: {
+            # gte: greater than/equal to; lte: less than/equal to
+            gte: (options[:rating_from] if options[:rating_from].present?),
+            lte: (options[:rating_to] if options[:rating_to].present?)
+          }
+        }
+      }
+    end
+    
+    __elasticsearch__.search(search_definition)
+  end
+  
+  def as_indexed_json(options={})
+    as_json(
+      methods: [:rating],
+      only: [:title, :description],
+      include: {
+        reviews: { only: [:content] }
+      }
+    )
   end
 end

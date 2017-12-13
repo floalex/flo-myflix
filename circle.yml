@@ -1,6 +1,8 @@
 machine:
   ruby:
     version: 2.3.4
+  services:
+    - elasticsearch
 deployment:
   production:
     branch: master

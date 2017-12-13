@@ -22,8 +22,8 @@ Video.find_or_create_by(
   comes to the opposite sex. The youngest, Stewie, is a genius baby bent on killing his 
   mother and destroying the world. The talking dog, Brian, keeps Stewie in check while sipping 
   martinis and sorting through his own life issues.",
-  small_cover_url: "/tmp/family_guy.jpg", 
-  large_cover_url: "/tmp/family_guy.jpg",
+  small_cover: "/tmp/family_guy.jpg", 
+  large_cover: "/tmp/family_guy.jpg",
   category_id: 1
 )
 Video.find_or_create_by(
@@ -33,16 +33,16 @@ Video.find_or_create_by(
   years in the future. He is taken in by his sole descendant, an elderly and addled scientist who owns 
   a small cargo delivery service. Among the other crew members are Capt. Leela, accountant Hermes, 
   intern Amy, obnoxious robot Bender and lobsterlike moocher Dr Zoidberg.",
-  small_cover_url: "/tmp/futurama.jpg",
-  large_cover_url: "/tmp/futurama.jpg",
+  small_cover: Rails.root.join('public/uploads/futurama.jpg').open,
+  large_cover: Rails.root.join('public/uploads/futurama.jpg').open,
   category_id: 1
 )
 Video.find_or_create_by(
   id: 3,
   title: 'Monk',
   description: 'Monk is an American comedy-drama detective mystery television series created by Andy Breckman and starring Tony Shalhoub as the eponymous character, Adrian Monk.',
-  small_cover_url: '/tmp/monk.jpg',
-  large_cover_url: '/tmp/monk_large.jpg',
+  small_cover: Rails.root.join('public/uploads/monk.jpg').open,
+  large_cover: Rails.root.join('public/uploads/monk.jpg').open,
   category_id: 1
 )
 Video.find_or_create_by(
@@ -90,24 +90,24 @@ Video.find_or_create_by(
   id: 8,
   title: 'Monk',
   description: 'Monk is an American comedy-drama detective mystery television series created by Andy Breckman and starring Tony Shalhoub as the eponymous character, Adrian Monk.',
-  small_cover_url: '/tmp/monk.jpg',
-  large_cover_url: '/tmp/monk_large.jpg',
+  small_cover: Rails.root.join('public/uploads/monk.jpg').open,
+  large_cover: Rails.root.join('public/uploads/monk_large.jpg').open,
   category_id: 1
 )
 Video.find_or_create_by(
   id: 9,
   title: "South Park", 
   description: "Funny Cartoon for adults", 
-  small_cover_url: "/tmp/south_park.jpg", 
-  large_cover_url: "/tmp/south_park.jpg",
+  small_cover: Rails.root.join('public/uploads/south_park.jpg').open,
+  large_cover: Rails.root.join('public/uploads/south_park.jpg').open,
   category_id: 1
 )
 Video.find_or_create_by(
   id: 10,
   title: 'Wonder Woman',
   description: 'Before she was Wonder Woman, she was Diana, princess of the Amazons, trained warrior. When a pilot crashes and tells of conflict in the outside world, she leaves home to fight a war, discovering her full powers and true destiny.',
-  small_cover_url: '/tmp/wonderwoman.jpg',
-  large_cover_url: '/tmp/wonderwoman.jpg',
+  small_cover: Rails.root.join('public/uploads/wonderwoman.jpg').open,
+  large_cover: Rails.root.join('public/uploads/wonderwoman.jpg').open,
   category_id: 2
 )
 Video.find_or_create_by(
@@ -120,8 +120,8 @@ Video.find_or_create_by(
   comes to the opposite sex. The youngest, Stewie, is a genius baby bent on killing his 
   mother and destroying the world. The talking dog, Brian, keeps Stewie in check while sipping 
   martinis and sorting through his own life issues.",
-  small_cover_url: "/tmp/family_guy.jpg", 
-  large_cover_url: "/tmp/family_guy.jpg",
+  small_cover: "/tmp/family_guy.jpg", 
+  large_cover: "/tmp/family_guy.jpg",
   category_id: 1
 )
 Video.find_or_create_by(
@@ -131,32 +131,32 @@ Video.find_or_create_by(
   years in the future. He is taken in by his sole descendant, an elderly and addled scientist who owns 
   a small cargo delivery service. Among the other crew members are Capt. Leela, accountant Hermes, 
   intern Amy, obnoxious robot Bender and lobsterlike moocher Dr Zoidberg.",
-  small_cover_url: "/tmp/futurama.jpg",
-  large_cover_url: "/tmp/futurama.jpg",
+  small_cover: "/tmp/futurama.jpg",
+  large_cover: "/tmp/futurama.jpg",
   category_id: 1
 )
 Video.find_or_create_by(
   id: 13,
   title: 'Monk',
   description: 'Monk is an American comedy-drama detective mystery television series created by Andy Breckman and starring Tony Shalhoub as the eponymous character, Adrian Monk.',
-  small_cover_url: '/tmp/monk.jpg',
-  large_cover_url: '/tmp/monk_large.jpg',
+  small_cover: '/tmp/monk.jpg',
+  large_cover: '/tmp/monk_large.jpg',
   category_id: 1
 )
 Video.find_or_create_by(
   id: 14,
   title: "South Park", 
   description: "Funny Cartoon for adults", 
-  small_cover_url: "/tmp/south_park.jpg", 
-  large_cover_url: "/tmp/south_park.jpg",
+  small_cover: "/tmp/south_park.jpg", 
+  large_cover: "/tmp/south_park.jpg",
   category_id: 1
 )
 Video.find_or_create_by(
   id: 15,
   title: 'Wonder Woman',
   description: 'Before she was Wonder Woman, she was Diana, princess of the Amazons, trained warrior. When a pilot crashes and tells of conflict in the outside world, she leaves home to fight a war, discovering her full powers and true destiny.',
-  small_cover_url: '/tmp/wonderwoman.jpg',
-  large_cover_url: '/tmp/wonderwoman.jpg',
+  small_cover: '/tmp/wonderwoman.jpg',
+  large_cover: '/tmp/wonderwoman.jpg',
   category_id: 2
 )
 Video.find_or_create_by(
@@ -169,8 +169,8 @@ Video.find_or_create_by(
   comes to the opposite sex. The youngest, Stewie, is a genius baby bent on killing his 
   mother and destroying the world. The talking dog, Brian, keeps Stewie in check while sipping 
   martinis and sorting through his own life issues.",
-  small_cover_url: "/tmp/family_guy.jpg", 
-  large_cover_url: "/tmp/family_guy.jpg",
+  small_cover: "/tmp/family_guy.jpg", 
+  large_cover: "/tmp/family_guy.jpg",
   category_id: 1
 )
 Video.find_or_create_by(
@@ -180,32 +180,32 @@ Video.find_or_create_by(
   years in the future. He is taken in by his sole descendant, an elderly and addled scientist who owns 
   a small cargo delivery service. Among the other crew members are Capt. Leela, accountant Hermes, 
   intern Amy, obnoxious robot Bender and lobsterlike moocher Dr Zoidberg.",
-  small_cover_url: "/tmp/futurama.jpg",
-  large_cover_url: "/tmp/futurama.jpg",
+  small_cover: "/tmp/futurama.jpg",
+  large_cover: "/tmp/futurama.jpg",
   category_id: 1
 )
 monk = Video.find_or_create_by(
   id: 18,
   title: 'Monk',
   description: 'Monk is an American comedy-drama detective mystery television series created by Andy Breckman and starring Tony Shalhoub as the eponymous character, Adrian Monk.',
-  small_cover_url: '/tmp/monk.jpg',
-  large_cover_url: '/tmp/monk_large.jpg',
+  small_cover: '/tmp/monk.jpg',
+  large_cover: '/tmp/monk_large.jpg',
   category_id: 1
 )
 Video.find_or_create_by(
   id: 19,
   title: "South Park", 
   description: "Funny Cartoon for adults", 
-  small_cover_url: "/tmp/south_park.jpg", 
-  large_cover_url: "/tmp/south_park.jpg",
+  small_cover: Rails.root.join('public/uploads/south_park.jpg').open,  
+  large_cover: Rails.root.join('public/uploads/south_park.jpg').open, 
   category_id: 1
 )
 Video.find_or_create_by(
   id: 20,
   title: 'Wonder Woman',
   description: 'Before she was Wonder Woman, she was Diana, princess of the Amazons, trained warrior. When a pilot crashes and tells of conflict in the outside world, she leaves home to fight a war, discovering her full powers and true destiny.',
-  small_cover_url: '/tmp/wonderwoman.jpg',
-  large_cover_url: '/tmp/wonderwoman.jpg',
+  small_cover: Rails.root.join('public/uploads/wonderwoman.jpg').open,
+  large_cover: Rails.root.join('public/uploads/wonderwoman.jpg').open,
   category_id: 2
 )
 puts "#{Video.count} videos"

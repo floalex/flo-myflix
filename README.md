@@ -1,6 +1,6 @@
 ## A non-trivial e-commerce application, a clone of NetFlix
 
-# Technology used to build MyFlix
+# Technology used
 - TDD with RSpec, Capybara, VCR and Selenium
 - Test doubles and method stubs
 - Advanced search on Videos with ELasticsearch
@@ -15,3 +15,6 @@
   * invite friends to join(with invitation token)
   * follow and unfollow users 
 - Admin capabilities: add videos, video images and view payments 
+- Advanced search options for users:
+  * include reviews in their advanced searches
+  * filter results by ratings

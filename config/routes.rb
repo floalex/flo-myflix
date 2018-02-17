@@ -19,7 +19,6 @@ Myflix::Application.routes.draw do
   
   get '/expired_token', to: 'pages#expired_token'
   
-  resources :categories, only: [:show]
   resources :queue_items, only: [:create, :destroy]
   
   resources :videos, only: [:show] do
@@ -37,10 +36,18 @@ Myflix::Application.routes.draw do
   
   resources :invitations, only: [:new, :create]
   
+  namespace :api do
+    namespace :v1 do
+      resources :videos, only: [:show]
+      resources :categories, only: [:show] 
+    end
+  end
+  
   namespace :admin do
     resources :videos, only: [:new, :create]
     resources :payments, only: [:index]
   end
   
   mount StripeEvent::Engine, at: '/stripe_events'
+  
 end

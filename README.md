@@ -18,3 +18,8 @@
 - Advanced search options for users:
   * include reviews in their advanced searches
   * filter results by ratings
+
+# Build API with jBuilder
+- Provide API format in JSON
+- Defind resources and routes for the API
+- Add controller for API, version it since this will go public

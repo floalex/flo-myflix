@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+# bundle command to install the gems
 gem 'bcrypt'
 gem 'bootstrap-sass', '3.1.1.1'
 gem 'bootstrap_form'
@@ -21,6 +22,9 @@ gem 'stripe_event'
 gem 'draper'
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
+
+# jbuilder for api
+gem 'jbuilder'
 
 group :development do
   gem 'thin'
